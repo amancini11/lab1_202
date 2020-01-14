@@ -24,14 +24,25 @@ public class Lab1 {
 //		scan.close();
 
 		
-		int elements = 3;
+		int elements = 10;
 		int[] input = new int[elements]; 
 		for(int i=0; i<elements; i++) {
 			
 			System.out.print("Enter an Integer: ");
 			String val = scan.nextLine();
 //			System.out.println("You entered " + val);
-			input[i] = Integer.parseInt(val);
+			
+			
+			
+			
+			try {
+				input[i] = Integer.parseInt(val);
+			}
+			catch (NumberFormatException exception){
+				System.out.println("Not a number.");
+				i--;
+			}
+			
 			
 		}
 		
